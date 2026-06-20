@@ -11,7 +11,7 @@ Compositional time-series forecasting of U.S. electricity generation mix across 
 
 Electricity generation shares - Natural Gas, Other Fossil Fuels (coal + petroleum), and Nuclear & Renewables - are **compositional**: they always sum to 100%. This violates the independence assumption of standard multivariate regression and forecasting models, which would produce nonsensical outputs (e.g. shares summing to 150%).
 
-Standard approaches fail here. This project applies **compositional data analysis** methods — specifically the Centered Log-Ratio (CLR) transformation - to map shares to an unconstrained space where VAR can operate correctly.
+Standard approaches fail here. This project applies **compositional data analysis** methods - specifically the Centered Log-Ratio (CLR) transformation - to map shares to an unconstrained space where VAR can operate correctly.
 
 ---
 
