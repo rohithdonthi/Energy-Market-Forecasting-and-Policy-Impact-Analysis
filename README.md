@@ -1,6 +1,6 @@
 # Energy Market Forecasting & Policy Impact Analysis
 
-> **MS Capstone Project — Rutgers University, December 2025**
+> **MS Capstone Project - Rutgers University, December 2025**
 > Supervisor: Prof. Yaqing Chen · M.S. Data Science (Statistics Track)
 
 Compositional time-series forecasting of U.S. electricity generation mix across **all 50 states + DC** using Centered Log-Ratio (CLR) transformation and Vector Autoregression (VAR) with AIC-based lag selection, benchmarked against a naive persistence baseline (1990–2023).
@@ -9,9 +9,9 @@ Compositional time-series forecasting of U.S. electricity generation mix across 
 
 ## 🔍 The Problem
 
-Electricity generation shares — Natural Gas, Other Fossil Fuels (coal + petroleum), and Nuclear & Renewables — are **compositional**: they always sum to 100%. This violates the independence assumption of standard multivariate regression and forecasting models, which would produce nonsensical outputs (e.g. shares summing to 150%).
+Electricity generation shares - Natural Gas, Other Fossil Fuels (coal + petroleum), and Nuclear & Renewables — are **compositional**: they always sum to 100%. This violates the independence assumption of standard multivariate regression and forecasting models, which would produce nonsensical outputs (e.g. shares summing to 150%).
 
-Standard approaches fail here. This project applies **compositional data analysis** methods — specifically the Centered Log-Ratio (CLR) transformation — to map shares to an unconstrained space where VAR can operate correctly.
+Standard approaches fail here. This project applies **compositional data analysis** methods — specifically the Centered Log-Ratio (CLR) transformation - to map shares to an unconstrained space where VAR can operate correctly.
 
 ---
 
@@ -51,7 +51,7 @@ The CLR transform maps a composition (x₁, x₂, x₃) to an unconstrained spac
 This allows VAR to model interdependencies between fuel types without violating the simplex constraint.
 
 ### Why VAR?
-The three fuel categories are not independent — when natural gas share rises, fossil fuels typically decline. VAR captures these cross-series lagged dependencies jointly. AIC-based lag selection lets each state choose its own optimal model complexity.
+The three fuel categories are not independent - when natural gas share rises, fossil fuels typically decline. VAR captures these cross-series lagged dependencies jointly. AIC-based lag selection lets each state choose its own optimal model complexity.
 
 ---
 
@@ -68,7 +68,7 @@ The three fuel categories are not independent — when natural gas share rises, 
 
 The persistence baseline (last observation carried forward) substantially outperforms both VAR models across all fuel categories. This is a **meaningful finding, not a failure**: annual electricity shares change slowly for most states, making persistence a very strong one-step-ahead predictor with only 33 annual observations per state.
 
-This implies that improving on persistence requires **exogenous variables** — Renewable Portfolio Standards, fuel price shocks, carbon regulations — rather than additional model complexity alone.
+This implies that improving on persistence requires **exogenous variables** - Renewable Portfolio Standards, fuel price shocks, carbon regulations - rather than additional model complexity alone.
 
 ---
 
@@ -126,7 +126,7 @@ jupyter notebook energy_mix_forecasting_clr_var.ipynb
 
 ## 📄 License
 
-MIT License — see [LICENSE](LICENSE) for details.
+MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
